@@ -41,7 +41,7 @@
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          <li class="menu-active"><a href="#hero">Home</a></li>
+          <li class="menu-active"><a href="./index.html">Home</a></li>
           <li class="menu-has-children"><a href="">Drop Down</a>
             <ul>
               <li><a href="#">Drop Down 1</a></li>
@@ -62,41 +62,44 @@
   ============================-->
   <section id="blog" class="padd-section wow fadeInUp">
 
-    <div class="container">
-      <div class="section-title text-center">
-
-        <h2>Latest posts</h2>
-        <p class="separator">Find some of the latest post</p>
-
-      </div>
-    </div>
 
     <div class="container">
       <div class="row">
-
-        <div class="col-md-6 col-lg-4">
-          <div class="block-blog text-left">
-            <a href="./setup-oracle-software.html"><img src="img/blogs/Oracle-data-dase-installation.jpg" alt="img" style="height: 181px;"></a>
-            <div class="content-blog">
-              <h4><a href="./setup-oracle-software.html">Steps to Install & Setup Oracle 11g in your local machine</a></h4>
-              <span>20,oct 2019</span>
-              <a class="pull-right readmore" href="./setup-oracle-software.html">read more</a>
-            </div>
-          </div>
+		
+		<div class="col-md-12">
+			<h3 class="navbar-brand page-heading" href="#">How to support Multi language in Oracle.</h3>
+			
+			<div class="content-describe">
+				<p> We may all come across the issue of how to support Multi language in Oracle. For that UTF-8 is the best way to do that. Here is the steps need to follow to achive
+				UTF-8 support.
+				</p>
+			<div>
+		
+			<div class="content-describe">
+				 
+				 <ol>
+					<li>Connect to the oracle database using SYS user.</li>
+					<li>Set the Character set to ALFUTF-8 using following command <code>update sys.props$ set VALUE$='AL32UTF8' where NAME='NLS_CHARACTERSET';</code></li>
+					<li>Restart the database using following command.
+					  <ul>
+						<li><code>shu immediate;</code></li>
+						<li><code>startup;</code></li>
+					  </ul>	
+					</li>
+				 </ol>
+				 
+				 <p>
+					<span> In Case if you are working with web application to enable UTF-8, configure the force encoding of all incomming request in <code>web.xml</code>. <span> <br/>
+						<img src="img/blogs/post2.PNG" class="img-responsive" alt="img">
+				 </p>
+				 
+				 <p>
+				   <span> To Support Multilanguage search in data table, do the below configuration in tomcat server of <code>server.xml</code> file</span><br>
+				   <img src="img/blogs/post2-2.PNG" class="img-responsive" alt="img">
+				 </p>
+				 
+			<div>	
         </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="block-blog text-left">
-            <a href="./oracle-utf-8-setup.html"><img src="img/blogs/utf-8-support.jpg" class="img-responsive" alt="img"></a>
-            <div class="content-blog">
-              <h4><a href="./oracle-utf-8-setup.html">Supporting Multi-language for web appllication using oracle database</a></h4>
-              <span>20, oct 2019</span>
-              <a class="pull-right readmore" href="./oracle-utf-8-setup.html">read more</a>
-            </div>
-          </div>
-        </div>
-
-      </div>
     </div>
   </section>
 

@@ -23,7 +23,6 @@
   <link href="lib/owlcarousel/assets/owl.theme.default.min.css" rel="stylesheet">
   <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <link href="lib/animate/animate.min.css" rel="stylesheet">
-  <link href="lib/modal-video/css/modal-video.min.css" rel="stylesheet">
 
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
@@ -41,7 +40,7 @@
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          <li class="menu-active"><a href="#hero">Home</a></li>
+          <li class="menu-active"><a href="./index.html">Home</a></li>
           <li class="menu-has-children"><a href="">Drop Down</a>
             <ul>
               <li><a href="#">Drop Down 1</a></li>
@@ -62,41 +61,48 @@
   ============================-->
   <section id="blog" class="padd-section wow fadeInUp">
 
-    <div class="container">
-      <div class="section-title text-center">
-
-        <h2>Latest posts</h2>
-        <p class="separator">Find some of the latest post</p>
-
-      </div>
-    </div>
 
     <div class="container">
       <div class="row">
+		
+		<div class="col-md-12">
+		 <h3 class="navbar-brand page-heading" href="#">Steps to Setup Oracle Software Installation</h3>
+		 
+		<div class="content-describe">
+			<p>
+				Step 1: Download the software from Oracle website. <a href="https://www.oracle.com/database/technologies/oracle-database-software-downloads.html"><span class="clickMe">Click Here<span></a>
+			</p>
+			
+			<p>
+				Step 2: Once the download is complete means proceed for installation. For reference use the link:
+				<a href="https://www.oracletutorial.com/getting-started/install-oracle/"><span class="clickMe">Click Here<span></a>
+			</p>
+			
+			<p>
+				Step 3: Create table-space, schema using command prompt <br>
+				
+				<span>
+					<ul>
+						<li>Login  into the database using default username and password  which you given during installation.</li>
+						<li>Create table space using command : <code> create tablespace TS_NAME DATAFILE 'temp_core.dat' SIZE 100M REUSE AUTOEXTEND ON; </code></li>
+						<li>Create user using command: <code>create user camelone identified by password default tablespace TS_NAME; </code></li>
+						<li>Grant role and permission to the user : <code> grant dba,connect,resource to camelone; </code></li>
+					</ul>
+				</span>
+				 
+			</p>
+			
+			<p>
+				Step 4: Once the installation is done, use the third part tool or database connector like Oracle SQL Developer <a href="https://www.oracle.com/tools/downloads/sqldev-v192-downloads.html">link</a> or PLSQL connector to connect to the database.
+			</p>
+			
+			<p>
+				That's all. Now you can hopefully connect and build any web application using oracle of any version.
+			</p>
 
-        <div class="col-md-6 col-lg-4">
-          <div class="block-blog text-left">
-            <a href="./setup-oracle-software.html"><img src="img/blogs/Oracle-data-dase-installation.jpg" alt="img" style="height: 181px;"></a>
-            <div class="content-blog">
-              <h4><a href="./setup-oracle-software.html">Steps to Install & Setup Oracle 11g in your local machine</a></h4>
-              <span>20,oct 2019</span>
-              <a class="pull-right readmore" href="./setup-oracle-software.html">read more</a>
-            </div>
-          </div>
+		<div>	
+		
         </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="block-blog text-left">
-            <a href="./oracle-utf-8-setup.html"><img src="img/blogs/utf-8-support.jpg" class="img-responsive" alt="img"></a>
-            <div class="content-blog">
-              <h4><a href="./oracle-utf-8-setup.html">Supporting Multi-language for web appllication using oracle database</a></h4>
-              <span>20, oct 2019</span>
-              <a class="pull-right readmore" href="./oracle-utf-8-setup.html">read more</a>
-            </div>
-          </div>
-        </div>
-
-      </div>
     </div>
   </section>
 
@@ -182,7 +188,6 @@
   <script src="lib/superfish/hoverIntent.js"></script>
   <script src="lib/superfish/superfish.min.js"></script>
   <script src="lib/easing/easing.min.js"></script>
-  <script src="lib/modal-video/js/modal-video.js"></script>
   <script src="lib/owlcarousel/owl.carousel.min.js"></script>
   <script src="lib/wow/wow.min.js"></script>
 
