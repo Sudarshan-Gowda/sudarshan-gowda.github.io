@@ -67,10 +67,10 @@
       <div class="row">
 		
 		<div class="col-md-12">
-			<h3 class="navbar-brand page-heading" href="#">How to support Multi language in Oracle.</h3>
+			<h3 class="navbar-brand page-heading" href="#">How to support Multi language using Mysql Database.</h3>
 			
 			<div class="content-describe">
-				<p> We may all come across the issue of how to support Multi language in Oracle. For that UTF-8 is the best way to do that. Here is the steps need to follow to achive
+				<p> We may all come across the issue of how to support Multi language in My-Sql. For that UTF-8 is the best way to do that. Here is the steps need to follow to achive
 				UTF-8 support.
 				</p>
 			<div>
@@ -78,28 +78,37 @@
 			<div class="content-describe">
 				 
 				 <ol>
-					<li>Connect to the oracle database using SYS user.</li>
-					<li>Set the Character set to ALFUTF-8 using following command <code>update sys.props$ set VALUE$='AL32UTF8' where NAME='NLS_CHARACTERSET';</code></li>
-					<li>Restart the database using following command.
-					  <ul>
-						<li><code>shu immediate;</code></li>
-						<li><code>startup;</code></li>
-					  </ul>	
+					<li>
+					  <p>While creating table make sure the table characterset should be configured with UTF-8.</p> 
+					  <p> <img src="img/blogs/mysql/mysql-utf-8-02.PNG" class="img-responsive" alt="img"></p>
 					</li>
 					
 					<li>
-					 <p><span> In Case if you are working with web application to enable UTF-8, configure the force encoding of all incomming request in <code>web.xml</code>. <span> <br/>
+					  <p>While creating table make sure the table characterset should be configured with UTF-8.</p> 
+					  <p> <img src="img/blogs/mysql/mysql-utf-8-03.PNG" class="img-responsive" alt="img"></p>
+					</li>
+					
+					<li>
+					 <p>Configure the utf-8 encoding in jndi configuration of mysql. If you are using apachi tomcat, you can find the finguration under context.xml followed by schema name<br>
+					  <code>?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC</code> </p> 
+					  <p>
+						 Find the reference as below: <br>
+						 <img src="img/blogs/mysql/mysql-utf-8-04.PNG" class="img-responsive" alt="img"/>
+					  </p>
+					</li>
+					
+					<li>
+					 <p> <span> In Case if you are working with web application to enable UTF-8, configure the force encoding of all incomming request in <code>web.xml</code>. <span> <br/>
 						<img src="img/blogs/post2.PNG" class="img-responsive" alt="img">
-					 </p>
+					</p>
 					</li>
-					
+						
 					<li>
-					 <p>
-						<span> To Support Multilanguage search in data table, do the below configuration in tomcat server of <code>server.xml</code> file</span><br>
-						<img src="img/blogs/post2-2.PNG" class="img-responsive" alt="img">
-					 </p>
-					</li>
-					
+						 <p><span> To Support Multilanguage search in data table, do the below configuration in tomcat server of <code>server.xml</code> file</span><br>
+							<img src="img/blogs/post2-2.PNG" class="img-responsive" alt="img">
+						 </p>
+					</li>	
+						
 				 </ol>
 				 
 			<div>	
